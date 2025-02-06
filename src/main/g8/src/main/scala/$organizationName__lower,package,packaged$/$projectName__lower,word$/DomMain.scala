@@ -28,9 +28,9 @@ object $projectName$ {
     appendPar(document.body, "Hello World! from Axiom Modeling & Design Inc.")
   }
 
-  def main(args: Array[String]): Unit = {
-    document.addEventListener("DOMContentLoaded", { (e: dom.Event) =>
-      setupUI()
-    })
-  }
+  // def main(args: Array[String]): Unit = {
+  //   document.addEventListener("DOMContentLoaded", { (e: dom.Event) =>
+  //     setupUI()
+  //   })
+  // }
 }
