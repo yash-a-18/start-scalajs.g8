@@ -19,8 +19,8 @@ object GetAST {
       val coreServices = services.asInstanceOf[typings.langium.libServicesMod.LangiumCoreServices]
       extractAstNode[PCM]("<FILE_PATH>.aurora", coreServices).toFuture
     }.map { pcmNode =>
-      println(s"Elements: ${pcmNode.elements.map(e => 
-        s"${e.$type}: ${js.JSON.stringify(js.Dynamic.literal(
+      println(s"Elements: \${pcmNode.elements.map(e => 
+        s"\${e.\$type}: \${js.JSON.stringify(js.Dynamic.literal(
           name = e.asInstanceOf[js.Dynamic].name,
           description = e.asInstanceOf[js.Dynamic].description
         ), space = 2)}"
@@ -33,9 +33,9 @@ object GetAST {
   def main(args: Array[String]): Unit = {
     getAST().onComplete {
       case scala.util.Success(result) =>
-        println(s"AST Extraction Result: $result")
+        println(s"AST Extraction Result: \$result")
       case scala.util.Failure(exception) =>
-        println(s"Error extracting AST: ${exception}")
+        println(s"Error extracting AST: \${exception}")
     }
 
   }
