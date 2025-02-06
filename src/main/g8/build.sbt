@@ -2,8 +2,9 @@
 ThisBuild / organization := "$organizationName$"
 ThisBuild / scalaVersion := "3.5.2"
 
-lazy val root = (project in file(".")).
-  settings(
+lazy val root = project 
+  .in(file("."))
+  .settings(
     name := "$name$",
     version := "$version$",
     // This is an application with a main method
