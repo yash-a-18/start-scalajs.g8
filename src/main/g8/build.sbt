@@ -15,7 +15,7 @@ lazy val root = project
     // For testing
     libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.19" % Test,
     libraryDependencies += "com.lihaoyi" %%% "utest" % "0.8.5" % Test,
-    testFrameworks += new TestFramework("utest.runner.Framework")
+    testFrameworks += new TestFramework("utest.runner.Framework"),
     externalNpm := baseDirectory.value,
     scalaJSLinkerConfig ~= { _.withModuleKind(ModuleKind.ESModule) }
   )
